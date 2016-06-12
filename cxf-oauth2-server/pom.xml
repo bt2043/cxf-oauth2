@@ -25,6 +25,7 @@
             <groupId>com.ericsson.ecanzho</groupId>
             <artifactId>cxf-oauth2-common</artifactId>
             <version>${cxf-oauth2.version}</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 

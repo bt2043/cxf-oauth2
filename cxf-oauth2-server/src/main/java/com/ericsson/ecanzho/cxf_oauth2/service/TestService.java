@@ -1,4 +1,4 @@
-package com.ericsson.ecanzho.service;
+package com.ericsson.ecanzho.cxf_oauth2.service;
 
 import org.springframework.stereotype.Service;
 
