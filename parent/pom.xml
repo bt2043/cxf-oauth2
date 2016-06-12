@@ -46,6 +46,12 @@
             <artifactId>cxf-rt-rs-security-oauth2</artifactId>
             <version>${cxf.version}</version>
         </dependency>
+        <!-- For WADL Auto generation at runtime -->
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-rs-service-description</artifactId>
+            <version>${cxf.version}</version>
+        </dependency>
 
         <!-- Spring Framework -->
         <dependency>

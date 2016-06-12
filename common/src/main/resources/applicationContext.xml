@@ -10,6 +10,8 @@
     <context:annotation-config />
     <context:spring-configured />
 
+    <bean class="com.google.gson.Gson" />
+
     <context:component-scan base-package="com.ericsson.ecanzho.cxf_oauth2" />
 
     <import resource="classpath*:spring/*.xml" />
