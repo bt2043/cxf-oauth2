@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.ericsson.ecanzho</groupId>
+    <artifactId>cxf-oauth2-server</artifactId>
+    <version>${cxf-oauth2.version}</version>
+    <packaging>war</packaging>
+
+    <parent>
+        <groupId>com.ericsson.ecanzho</groupId>
+        <artifactId>cxf-oauth2-parent</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <properties>
+        <jetty-maven-plugin.version>8.1.16.v20140903</jetty-maven-plugin.version>
+        <maven-war-plugin.version>2.4</maven-war-plugin.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.ericsson.ecanzho</groupId>
+            <artifactId>cxf-oauth2-common</artifactId>
+            <version>${cxf-oauth2.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.mortbay.jetty</groupId>
+                    <artifactId>jetty-maven-plugin</artifactId>
+                    <version>${jetty-maven-plugin.version}</version>
+                    <configuration>
+                        <webAppConfig>
+                            <contextPath>/</contextPath>
+                        </webAppConfig>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>${maven-war-plugin.version}</version>
+                    <configuration>
+                        <failOnMissingWebXml>false</failOnMissingWebXml>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+
+</project>
